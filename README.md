@@ -1,96 +1,56 @@
-# 🧠 Vision-Language-Action (VLA) Mini Simulation
+# 🧠 Vision‑Language‑Action (VLA) Mini Simulator
 
-A simple, Colab-ready **Vision-Language-Action (VLA)** demonstration that connects *vision*, *language*, and *action* — inspired by cutting-edge embodied AI research (e.g., RT-X, OpenVLA, AIRoA).
-
-This project demonstrates how a vision-language model can interpret **visual input** from an environment and decide an **action** based on a natural language instruction.
-
----
+A simple, Colab‑ready **Vision‑Language‑Action (VLA)** technical demo showing how vision, language and action can be integrated — suitable for portfolio and developer showcase use.
 
 ## 🎯 Objective
 
 > “Keep the pole balanced.”
 
-Using the *CartPole-v1* environment, the system:
+In this demo you’ll find two notebooks:
 
-- Observes the visual state of the environment.  
-- Receives a natural language instruction.  
-- Uses a simple vision-language reasoning method to select an action.  
-- Logs and visualizes its step-by-step behavior.
+- `VLA_Conceptual_Demo.ipynb` — A conceptual demo using an image + instruction → action mapping via CLIP embeddings and a small action head.  
+- `VLA_Practical_Demo.ipynb` — A practical demo that uses the CartPole‑v1 environment to show how an agent could interpret visual state + language instruction → control action.
 
----
+## ⚙️ Setup & Usage
 
-## ⚙️ Setup and Usage
+Run easily in Google Colab:
 
-Run this project easily on **Google Colab** — no GPU required.
-
-### Option 1: Open in Colab
-
-| Notebook | Description |
-|-----------|--------------|
-| [🔗 VLA_Demo_1.ipynb](VLA_Demo_1.ipynb) | Basic reasoning and visualization |
-| [🔗 VLA_Demo_2.ipynb](VLA_Demo_2.ipynb) | Enhanced logging and video export |
-
-> Simply open either notebook in Google Colab and run all cells sequentially.
-
----
+1. Open one of the notebooks in Colab.  
+2. Run all cells sequentially.  
+3. If using the practical demo, it will log the agent steps and generate a `.mp4` video of the simulation.
 
 ## 🧩 Project Structure
 
 ```
-vla-mini-simulation/
+VLA_MiniSimulator/
 │
-├── VLA_Demo_1.ipynb           # Basic simulation and reasoning
-├── VLA_Demo_2.ipynb           # With enhanced logging and video output
-└── README.md                  # This file
+├── VLA_Conceptual_Demo.ipynb     # Conceptual VLA pipeline
+├── VLA_Practical_Demo.ipynb      # Embodied simulation demo
+└── README.md                     # This file
 ```
-
----
 
 ## 🧪 Example Output
 
-### 🖥️ Logs
-
+### Logs
 ```
 🎯 Instruction: "Keep the pole balanced"
 
-🌀 Step 5
-Observation: [-0.0361, -1.1556, 0.0478, 1.7100]
+🌀 Step 0
+Observation: [ 0.0208809 -0.1810137 -0.0358661  0.2689328 ]
 Action taken: 0
 Reward received: 1.000
 ------------------------------------------------------------
 ```
 
-### 🎥 Video (auto-generated)
-
-Each run produces a short `.mp4` showing how the agent balances the pole based on the given instruction.
-
----
+### Video
+The practical demo produces a movie (`.mp4`) showing the agent balancing the pole, which can be embedded or reviewed as part of the demonstration.
 
 ## 📄 Features
 
-✅ Vision-language reasoning with CLIP-style embeddings  
-✅ Real-time action and reward logging  
-✅ JSON-based structured logs for analysis  
-✅ Automatic MP4 video generation  
-✅ 100% runnable in Google Colab  
+- ✅ Vision‑language reasoning with a CLIP‑style image+text embedding.  
+- ✅ Structured log output of action decisions and rewards.  
+- ✅ Generated video of simulation to visualize results.  
+- ✅ Fully runnable in Colab without heavy dependencies.
 
----
-
-## 🌍 Research Context
-
-This mini-project reflects the core principles of **embodied AI**, linking perception, reasoning, and motor control.  
-It aligns conceptually with projects like:
-
-- AIRoA’s Vision-Language-Action foundation models  
-- DeepMind RT-X / RT-2  
-- Stanford’s OpenVLA  
-
----
-
-## 👨‍💻 Author
-
-**Shahzeb Khoso**  
-AI Research Engineer | Generative & Embodied Intelligence  
-📍 [LinkedIn](https://www.linkedin.com/in/shahzebkhoso) | [GitHub](https://github.com/<yourusername>)
 
 ---
